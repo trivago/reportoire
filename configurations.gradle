@@ -1,0 +1,12 @@
+// Build file defining the configurations.
+
+// The configurations
+ext.configuration = [
+        testRunner          : 'android.support.test.runner.AndroidJUnitRunner',
+        minimumSdkVersion   : 15,
+        compileSdkVersion   : 25,
+        targetSdkVersion    : 25,
+        buildToolsVersion   : "24.0.3"
+]
+
+def configuration = ext.configuration

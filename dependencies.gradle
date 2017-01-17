@@ -1,0 +1,27 @@
+// Build file defining the dependencies.
+
+// The used versions
+ext.version = [
+
+        // Kotlin
+        kotlin: "1.0.6"
+]
+
+def version = ext.version;
+
+// The used libraries
+ext.library = [
+
+        // Gradle
+        gradle              : 'com.android.tools.build:gradle:2.2.3',
+
+        // Kotlin
+        kotlin_stdlib       : "org.jetbrains.kotlin:kotlin-stdlib:$version.kotlin",
+        kotlin_gradle_plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$version.kotlin",
+
+        // Testing
+        spek                : 'org.jetbrains.spek:spek:1.0.+',
+        mockito             : 'org.mockito:mockito-core:1.10.0',
+]
+
+def library = ext.library;

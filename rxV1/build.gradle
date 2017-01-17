@@ -1,0 +1,60 @@
+apply from: "$rootProject.projectDir/dependencies.gradle"
+apply from: "$rootProject.projectDir/configurations.gradle"
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+def library = ext.library;
+def configuration = ext.configuration;
+
+android {
+    compileSdkVersion configuration.compileSdkVersion
+    buildToolsVersion configuration.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion configuration.minimumSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+
+        versionCode = 100
+        versionName = "1.0.0"
+
+        testInstrumentationRunner configuration.testRunner
+    }
+
+    // Types
+    buildTypes {
+        debug {
+            debuggable true;
+            zipAlignEnabled false;
+        }
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+}
+
+dependencies {
+
+    // Reportoire
+    compile project(path: ':core')
+
+    // Kotlin
+    compile "$library.kotlin_stdlib"
+
+    // Rx
+    compile 'io.reactivex:rxjava:1.2.4'
+
+    // Testing
+    testCompile "$library.mockito"
+    testCompile("$library.spek", {
+        exclude module: 'kotlin-stdlib'
+        exclude module: 'kotlin-runtime'
+    })
+}
