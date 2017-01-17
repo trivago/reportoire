@@ -140,3 +140,9 @@ An abstract RxSource source that will use the specified observable or resubscrib
  */
 abstract fun onCreateResultObservable(input: TInput?): Observable<Result<TModel>>
 ```
+### About
+
+Reportoire was built by trivago 🏨
+### License
+
+Reportoire is licensed under Apache Version 2.0.
