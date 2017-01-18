@@ -6,9 +6,27 @@ For further discussions and information please take a look at our [blog post]().
 
 ![](https://travis-ci.org/trivago/reportoire.svg?branch=master)
 
+#Installation
+
+Simply add the corresponding gradle dependency to your application's `build.gradle`:
+
+```groovy
+dependencies {
+
+    // Core
+    compile 'com.trivago.reportoire:reportoire-core:{latest_version}'
+    
+    // rxV1
+    compile 'com.trivago.reportoire:reportoire-rxV1:{latest_version}'
+    
+    // rxV2
+    compile 'com.trivago.reportoire:reportoire-rxV2:{latest_version}'
+}
+```
+
 ##Sample
 
-Here is an example implementation that would first ask a memory source and afterwards the network one.
+Here is an example implementation that would first ask a memory source and afterwards a network one.
 
 ```java
 /**
@@ -119,7 +137,7 @@ A source that calls the given callback once there is a result.
 fun fetchResult(input: TInput?, callback: ResultCallback<TModel>)
 ```
 
-##rx
+##rxV1 & rxV2
 
 ###RXSource
 
@@ -145,6 +163,7 @@ abstract fun onCreateResultObservable(input: TInput?): Observable<Result<TModel>
 ### About
 
 Reportoire was built by trivago 🏨
+
 ### License
 
 Reportoire is licensed under Apache Version 2.0.
