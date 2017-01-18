@@ -4,6 +4,8 @@
 
 For further discussions and information please take a look at our [blog post]().
 
+![](https://travis-ci.org/trivago/reportoire.svg?branch=master)
+
 ##Sample
 
 Here is an example implementation that would first ask a memory source and afterwards the network one.
