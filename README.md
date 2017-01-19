@@ -160,6 +160,10 @@ An abstract RxSource source that will use the specified observable or resubscrib
  */
 abstract fun onCreateResultObservable(input: TInput?): Observable<Result<TModel>>
 ```
+### Issues
+
+If you have any issues running the app after including this library, concider to check this [RxRelay issue](https://github.com/JakeWharton/RxRelay/issues/13) and update RxRelay to either `1.2.0` or `2.0.0`.
+
 ### About
 
 Reportoire was built by trivago 🏨
