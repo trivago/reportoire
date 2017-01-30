@@ -2,7 +2,7 @@
 
 **Reportoire** is a simple set of classes to apply the repository pattern to your Android application.
 
-For further discussions and information please take a look at our [blog post]().
+For further discussions and information please take a look at our [blog post](http://tech.trivago.com/2017/01/30/reportoire-the-journey-to-data-source-independency/).
 
 ![](https://travis-ci.org/trivago/reportoire.svg?branch=master)
 
