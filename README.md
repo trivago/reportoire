@@ -1,4 +1,8 @@
-#reportoire
+# reportoire
+
+> [!CAUTION]
+> This repository has been archived as of October 2025.  
+> If you wish to update or extend this project, please create a fork.
 
 **Reportoire** is a simple set of classes to apply the repository pattern to your Android application.
 
